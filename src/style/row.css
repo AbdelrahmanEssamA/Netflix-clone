@@ -1,0 +1,75 @@
+.row {
+   position: relative;
+   margin-left: 26px;
+   color: white;
+}
+.title {
+   margin-left: 26px;
+   color: white;
+}
+.posters {
+   overflow-x: scroll;
+   display: flex;
+   padding: 30px 25px;
+}
+
+.posters::-webkit-scrollbar {
+   width: 0;
+}
+.poster {
+   max-height: 180px;
+   object-fit: contain;
+   width: 100%;
+   transition: transform 450ms;
+   margin-right: 1.1%;
+   border-radius: 12px;
+   box-shadow: 0px 5px 8px rgba(15, 15, 15, 0.808);
+}
+.poster:hover {
+   transform: scale(1.05);
+}
+.posterLarge:hover {
+   transform: scale(1.08);
+}
+.posterLarge {
+   max-height: 350px;
+   object-fit: contain;
+   width: 100%;
+   transition: transform 450ms;
+   margin-right: 1.1%;
+   border-radius: 12px;
+   box-shadow: 0px 5px 8px rgba(17, 17, 17, 0.808);
+}
+
+.switchLeft,
+.switchRight {
+   text-align: center;
+   background-color: black;
+   opacity: 0.2;
+   font-family: sans-serif;
+   color: white;
+   font-weight: bold;
+   margin: auto;
+   padding: 25px 10px;
+   font-size: 25px;
+   top: 33%;
+   z-index: 3;
+   border-radius: 10px;
+   display: inline-block;
+   transition: opacity 450ms;
+}
+
+.switchLeft {
+   position: absolute;
+   left: 1px;
+}
+
+.switchRight {
+   position: absolute;
+   right: 1px;
+}
+
+.switchRight:hover,
+.switchLeft:hover {
+   opacity: 0.6;
+}
