@@ -1,3 +1,17 @@
+# Movie Database with Netflix UI
+Deployment: https://netflix-clone-ae.web.app/
+
+## Tools
+React-Hooks
+Raw-CSS
+Axios
+TMDB API
+React-Youtube
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
