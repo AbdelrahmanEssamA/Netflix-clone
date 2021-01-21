@@ -36,7 +36,7 @@
    margin-top: 4px;
 }
 .nav-Link {
-   list-style: nones;
+   list-style: none;
    display: inline-block;
    margin-left: 40px;
    color: white;
@@ -44,4 +44,36 @@
 .nav-Link a {
    text-decoration: none;
    color: white;
+}
+@media only screen and (max-width: 520px) {
+   .nav {
+      height: 10px;
+   }
+   .nav_logo {
+      position: absolute;
+      width: 0px;
+      left: 0;
+   }
+   .nav_avatar {
+      position: absolute;
+      width: 0px;
+      left: 0;
+   }
+   .nav-Links {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      left: 0;
+      padding: 0;
+      margin-left: 20px;
+   }
+   .nav-Link {
+      text-align: center;
+      list-style: none;
+      display: inline-block;
+      margin-right: 40px;
+      margin-left: 0;
+      color: white;
+      font-size: 16px;
+   }
 }

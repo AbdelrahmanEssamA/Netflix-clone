@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../style/Nav.css";
 
 function Nav() {
@@ -23,13 +24,13 @@ function Nav() {
          />
          <ul className='nav-Links'>
             <li className='nav-Link'>
-               <a href='#'>Home</a>
+               <Link to='/'>Home</Link>
             </li>
             <li className='nav-Link'>
-               <a href='#'>Movies</a>
+               <Link to='/Movies'>Movies</Link>
             </li>
             <li className='nav-Link'>
-               <a href='#'>TV Shows</a>
+               <Link to='/TV'>TV Shows</Link>
             </li>
          </ul>
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import requests from "../requests";
 import axios from "../axios";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
@@ -14,8 +13,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
          autoplay: 0,
       },
    };
-   /* <a className='switchRight sliderButton'>{">"}</a>
-            <a className='switchLeft sliderButton'>{"<"}</a> */
 
    useEffect(() => {
       async function fetchData() {
@@ -25,7 +22,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       }
       fetchData();
    }, [fetchUrl]);
-
+   /*   https://linnea.com.ar/wp-content/uploads/2018/09/404PosterNotFoundReverse.jpg*/
    const getMovies = () => {
       const base_url = "http://image.tmdb.org/t/p/w400";
       return movies.map((movie) => (
@@ -52,13 +49,13 @@ function Row({ title, fetchUrl, isLargeRow }) {
             .catch((error) => console.log(error));
       }
    };
+
    return (
       <React.Fragment>
          <h1 className='title'>{title}</h1>
          <div className='row'>
             <div className='posters'>{getMovies()}</div>
-
-            <div style={{ padding: "40px" }}>
+            <div style={{ padding: "20px" }}>
                {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
             </div>
          </div>

@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
-import requests from "../requests";
 import axios from "../axios";
 import "../style/banner.css";
-function Banner() {
+function Banner({ fetchUrl }) {
    const [movie, setMovie] = useState([]);
    useEffect(() => {
       async function fetchData() {
-         const request = await axios.get(requests.fetchNetflixOriginals);
+         const request = await axios.get(fetchUrl);
          const data = request.data.results;
          const randomNum = Math.floor(Math.random() * data.length - 1);
          setMovie(data[randomNum]);
          return request;
       }
       fetchData();
-   }, []);
+   }, [fetchUrl]);
 
    function truncate(str, n) {
       return str?.length > n ? str.substr(0, n - 1) + "..." : str;
